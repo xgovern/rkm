@@ -1,0 +1,23 @@
+{
+	"name": "omnizen",
+	"description": "Citizen of All",
+	"version": "1.0.1",
+	"main": "xgov_alias.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author":"Joe K. Kim",
+	"license":"Proprietary",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xgovern/xgov"
+	},
+	"keywords":["xgov","xgovern","RKM","governance","decentralized govern","decentralized governance"],
+	"bugs": {
+		"url": "https://github.com/xgovern/xgov/issues"
+	},
+	"homepage": "https://omnizen.com",
+	"dependencies": {
+		"xgov": "^1.0.0"
+	}
+}
