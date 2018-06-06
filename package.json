@@ -1,7 +1,7 @@
 {
 	"name": "rkm",
 	"description": "Rane-Kim-Matsumoto Key Recovery Protocol",
-	"version": "0.0.0",
+	"version": "0.0.2",
 	"main": "rkm.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -12,11 +12,11 @@
 		"type": "git",
 		"url": "https://github.com/xgovern/rkm"
 	},
-	"keywords":["rkm","rkm protocol","key recovery","private key recovery","key reconstruct","questionnaire key recover","personalized questionnaire key recovery"],
+	"keywords":["rkm","potion","rkm protocol","key recovery","private key recovery","key reconstruct","questionnaire key recover","personalized questionnaire key recovery"],
 	"bugs": {
 		"url": "https://github.com/xgovern/rkm/issues"
 	},
-	"homepage": "https://recoverykey.io",
+	"homepage": "https://recoverkey.io",
 	"dependencies": {
 		"xgov": "^1.0.0"
 	}
