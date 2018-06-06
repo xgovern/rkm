@@ -1,22 +1,22 @@
 {
-	"name": "omnizen",
-	"description": "Citizen of All",
-	"version": "1.0.1",
-	"main": "xgov_alias.js",
+	"name": "rkm",
+	"description": "Rane-Kim-Matsumoto Key Recovery Protocol",
+	"version": "0.0.0",
+	"main": "rkm.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author":"Joe K. Kim",
+	"author":"Joe K. Kim, Anvay Rane, Shinsuke Matsumoto",
 	"license":"Proprietary",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/xgovern/xgov"
+		"url": "https://github.com/xgovern/rkm"
 	},
-	"keywords":["xgov","xgovern","RKM","governance","decentralized govern","decentralized governance"],
+	"keywords":["rkm","rkm protocol","key recovery","private key recovery","key reconstruct","questionnaire key recover","personalized questionnaire key recovery"],
 	"bugs": {
-		"url": "https://github.com/xgovern/xgov/issues"
+		"url": "https://github.com/xgovern/rkm/issues"
 	},
-	"homepage": "https://omnizen.com",
+	"homepage": "https://recoverykey.io",
 	"dependencies": {
 		"xgov": "^1.0.0"
 	}
