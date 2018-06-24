@@ -9,10 +9,10 @@ Personalized-questionnaire recovery scheme for private key & long passwords.
 ### Digesting Questionnaire & Answer Sheet
 
 rkm.`digest`(  
-&nbsp; &nbsp; &nbsp; &nbsp; {
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __private_key__:(str), __password__:(str,''), __questions__:(array(str)), __answers__:(array(str)),
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __private_key__:(str), __password__:(str,''), __questions__:(array(str)), __answers__:(array(str)),
-&nbsp; &nbsp; &nbsp; &nbsp; },
+&nbsp; &nbsp; &nbsp; &nbsp; {  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __private_key__:(str), __password__:(str,''), __questions__:(array(str)), __answers__:(array(str)),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __private_key__:(str), __password__:(str,''), __questions__:(array(str)), __answers__:(array(str)),  
+&nbsp; &nbsp; &nbsp; &nbsp; },  
 &nbsp; &nbsp; &nbsp; &nbsp; {__callback__:(func), *onprogress*(func)}  
 );
   
