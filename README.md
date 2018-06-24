@@ -22,7 +22,10 @@ rkm.`digest`(
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *minimum_iteration_mark*:(+int,1),  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *minimum_iteration_answer*:(+int,1)  
 &nbsp; &nbsp; &nbsp; &nbsp; },  
-&nbsp; &nbsp; &nbsp; &nbsp; {__callback__:(func), *onprogress*(func)}  
+&nbsp; &nbsp; &nbsp; &nbsp; {  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __callback__:(func),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *onprogress*(func)  
+&nbsp; &nbsp; &nbsp; &nbsp; }  
 );
   
 ```javascript
