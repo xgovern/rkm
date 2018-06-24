@@ -2,21 +2,25 @@
 
 [recoverkey.io](https://recoverkey.io "Potion: Recover Key")
   
-Personalized-questionnaire recovery scheme for private key & long passwords.  
+Personalized-questionnaire recovery scheme for private key & un-resettable passwords.  
   
-## Schematics
+## Personalization Schematics
   
 ![RKM Schematics](https://xgov.s3-accelerate.amazonaws.com/potion/rkm_scheme5.png "")
   
 ## Usage Documentation
   
-### Digesting Questionnaire & Answer Sheet
+### Generating Encrypted Questionnaire
 
 rkm.`digest`(  
 &nbsp; &nbsp; &nbsp; &nbsp; {  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __private_key__:(str), __password__:(str), __questions__:(array(str)), __answers__:(array(str)),  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *false_positive_rate*:(str,'33%'), *batch_size*:(+int,40000), *map_byte*:(+int:(2~8)), *salt_length*:(+int:(16+)),  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *minimum_iteration_password*:(+int,1), *minimum_iteration_mark*:(+int,1),  *minimum_iteration_answer*:(+int,1),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __private_key__:(str), __password__:(str),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __questions__:(array(str)), __answers__:(array(str)),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *false_positive_rate*:(str,'33%'), *batch_size*:(+int,40000),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *map_byte*:(+int:(2~8)), *salt_length*:(+int:(16+)),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *minimum_iteration_password*:(+int,1),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *minimum_iteration_mark*:(+int,1),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *minimum_iteration_answer*:(+int,1)  
 &nbsp; &nbsp; &nbsp; &nbsp; },  
 &nbsp; &nbsp; &nbsp; &nbsp; {__callback__:(func), *onprogress*(func)}  
 );
