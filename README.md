@@ -1,11 +1,15 @@
 # RKM (Rane-Kim-Matsumoto) Key Recovery Mechanism
 
 [recoverkey.io](https://recoverkey.io "Potion: Recover Key")
-
-Personalized-questionnaire recovery scheme for private key & long passwords.
+  
+Personalized-questionnaire recovery scheme for private key & long passwords.  
+  
+## Schematics
+  
+![RKM Schematics](https://xgov.s3-accelerate.amazonaws.com/potion/rkm_scheme5.png "")
   
 ## Usage Documentation
-
+  
 ### Digesting Questionnaire & Answer Sheet
 
 rkm.`digest`(  
@@ -18,11 +22,12 @@ rkm.`digest`(
 );
   
 ```javascript
-// private_key accepted format: base58 (bitcoin) && base62 (xgov) & hex (ethereum)
-// questions, answers, passwords all support Unicode, foreign characters
-// default answer filter: remove special chars and white spaces and lower case
+//
+//	private_key accepted format: base58 (bitcoin) && base62 (xgov) & hex (ethereum)
+//	questions, answers, passwords all support Unicode, foreign characters
+// 	default answer filter: remove special chars and white spaces and lower case
 // 
-// see example below for usage
+//	See example below for usage:
 //
 rkm.digest({
 		private_key:'SJSvdelNkuc9aKNQE1u8B1t3iLwHqicabPCzXbu8aBr',
@@ -44,8 +49,7 @@ rkm.digest({
 	},{
 	callback:function(e,data){
 		if(e) return; //Error case;
-		
-		var encrypted_questionnaire = data;
+		var encrypted_questionnaire_base64 = data;
 		//wrapping scheme: JSON --> gzip --> nacl-secretbox --> base64
 		//To decrypt, base64_decode --> nacl-secretbox-open --> gzip.undo --> JSON.parse
 		
