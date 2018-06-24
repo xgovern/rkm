@@ -9,7 +9,10 @@ Personalized-questionnaire recovery scheme for private key & long passwords.
 ### Digesting Questionnaire & Answer Sheet
 
 rkm.`digest`(  
-&nbsp; &nbsp; &nbsp; &nbsp; {__private_key__:(str), __password__:(str,''), __questions__:(array(str)), __answers__:(array(str)), *async\_interval*:(+int,300)},  
+&nbsp; &nbsp; &nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __private_key__:(str), __password__:(str,''), __questions__:(array(str)), __answers__:(array(str)),
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __private_key__:(str), __password__:(str,''), __questions__:(array(str)), __answers__:(array(str)),
+&nbsp; &nbsp; &nbsp; &nbsp; },
 &nbsp; &nbsp; &nbsp; &nbsp; {__callback__:(func), *onprogress*(func)}  
 );
   
@@ -17,8 +20,10 @@ rkm.`digest`(
 // private_key accepted format: base58 (bitcoin) && base62 (xgov) & hex (ethereum)
 // questions, answers, passwords all support Unicode, foreign characters
 // default answer filter: remove special chars and white spaces and lower case
+// 
+// see example below for usage
+//
 rkm.digest({
-		//accepted format: base58 (bitcoin) && base62 (xgov) & hex (ethereum)
 		private_key:'SJSvdelNkuc9aKNQE1u8B1t3iLwHqicabPCzXbu8aBr',
 		password:'',
 		questions:[
