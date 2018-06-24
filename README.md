@@ -31,9 +31,10 @@ rkm.`digest`(
 ```javascript
 //
 //	private_key accepted format: base58 (bitcoin) && base62 (xgov) & hex (ethereum)
+//	Minimum 1 Q&A required; maximum 16 pairs
 //	questions, answers, passwords all support Unicode, foreign characters
-// 	default answer filter: remove special chars and white spaces and lower case
-// 
+// 	default answer filter: toLowerCase then remove special chars and white spaces
+// 	
 //	See example below for usage:
 //
 rkm.digest({
