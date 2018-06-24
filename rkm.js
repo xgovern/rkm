@@ -1,8 +1,8 @@
 /*
 //=============================================================================================================
 //
-//		Name        : 	RKM Protocol
-//		Author      : 	Anvay Rane, Joe K. Kim (J.K.K.), Shinsuke Matsumoto
+//		Name		: 	RKM Protocol
+//		Author		: 	Anvay Rane, Joe K. Kim (J.K.K.), Shinsuke Matsumoto
 //		Site		:	recoverkey.io
 //		Version     : 	1.0.0
 //		
@@ -20,7 +20,10 @@ is_nodeJS = (new Function("try{return this===global;}catch(e){return false;}"))(
 if(is_nodeJS){try{is_worker=require?false:true;}catch(e){is_worker = true;}}
 else{is_worker = (new Function("try{document}catch(e){return true;}"))();}
 is_nodeJS_master = (is_nodeJS && !is_worker);
-//if(is_worker && !is_nodeJS) importScripts("https://s3.amazonaws.com/jvs-static/nacl-fast.min.js");
+if(is_worker && !is_nodeJS){
+	importScripts("https://xgovern.com/nacl-fast.min.js");
+	importScripts("https://xgovern.com/pako.min.js");
+}
 
 var time = function(){return Math.floor((new Date).getTime()/1000);}
 var mtime = function(){return (new Date).getTime();}
@@ -31,12 +34,43 @@ var sort_object_keys = function(obj){
 
 var rkm = (function(){
 
+	
+	var xgov_lib = is_nodeJS_master ? require('xgov') : xgov;
+	var rkm_multicore_enabled = false;
 	var rkm = {};
 
-	try{if(is_nodeJS_master && module) module.exports = rkm;}
-	catch(e){}
-	
+	rkm. digest = function(param,options){
+		return xgov_lib.rkm_digest(param,options);
+	}
+	rkm. recover = function(param,options){
+		return xgov_lib.rkm_recover(param,options);
+	}
+
+	try{if(is_nodeJS_master && module) module.exports = rkm;}catch(e){}
+
 	Object.freeze(rkm);
-    return rkm;
-    
+	return rkm;
+
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
