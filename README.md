@@ -24,7 +24,7 @@ rkm.`digest`(
 &nbsp; &nbsp; &nbsp; &nbsp; },  
 &nbsp; &nbsp; &nbsp; &nbsp; {  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __callback__:(func),  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *onprogress*(func)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *onprogress*:(func)  
 &nbsp; &nbsp; &nbsp; &nbsp; }  
 );
   
@@ -39,7 +39,7 @@ rkm.`digest`(
 //
 rkm.digest({
 		private_key:'SJSvdelNkuc9aKNQE1u8B1t3iLwHqicabPCzXbu8aBr',
-		password:'',
+		password:'some_very_berry_difficult_password',
 		questions:[
 			"Custom Question 1",
 			"Custom Question 2",
