@@ -10,8 +10,9 @@ Personalized-questionnaire recovery scheme for private key & long passwords.
 
 rkm.`digest`(  
 &nbsp; &nbsp; &nbsp; &nbsp; {  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __private_key__:(str), __password__:(str,''), __questions__:(array(str)), __answers__:(array(str)),  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __private_key__:(str), __password__:(str,''), __questions__:(array(str)), __answers__:(array(str)),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __private_key__:(str), __password__:(str), __questions__:(array(str)), __answers__:(array(str)),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *false_positive_rate*:(str,'33%'), *batch_size*:(+int,40000), *map_byte*:(+int:(2~8)), *salt_length*:(+int:(16+)),  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *minimum_iteration_password*:(+int,1), *minimum_iteration_mark*:(+int,1),  *minimum_iteration_answer*:(+int,1),  
 &nbsp; &nbsp; &nbsp; &nbsp; },  
 &nbsp; &nbsp; &nbsp; &nbsp; {__callback__:(func), *onprogress*(func)}  
 );
