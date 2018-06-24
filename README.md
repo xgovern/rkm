@@ -2,7 +2,7 @@
 
 [recoverkey.io](https://recoverkey.io "Potion: Recover Key")
   
-Personalized-questionnaire recovery scheme for private key & un-resettable passwords.  
+Personalized recovery scheme for private keys & un-resettable passwords with custom questionnaires  
   
 ## Personalization Schematics
   
