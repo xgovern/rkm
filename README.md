@@ -2,7 +2,7 @@
 
 [recoverkey.io](https://recoverkey.io "Potion: Recover Key")
   
-A recovery scheme for private keys & un-resettable passwords that contextualizable to a person
+A recovery scheme, for private keys & un-resettable passwords, that is contextualizable to a person.
 (e.g. mapping to... private/security questions, biometric data, pictorial data, etc.)
   
   
