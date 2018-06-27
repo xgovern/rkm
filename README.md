@@ -28,19 +28,6 @@ rkm.`digest`(
 &nbsp; &nbsp; &nbsp; &nbsp; }  
 );
   
-  
-The function resolves to an output which is an encrypted questionnaire.
-The encrypted questionnaire does not store the answers inside (only questions, iteration numbers, and salt),
-and thus is a much safer way to store an recovery option at-rest. The hacker must provide the right decryption password,
-then, has to provide __all the answers correctly__; otherwise the recovery will output a gibberish 32-byte private key that
-resembles nothing like the original private key (not even partial resemblance which gives out information).
-  
-1) This is certainly better than 16~32 random recovery phrases
-that one has to write down which is vulnerable to location/physical attack)  
-  
-2) This is also superior to user-chosen seed words which is notoriously easier to brute-force.
-  
-  
 ```javascript
 //
 //	private_key accepted format: base58 (bitcoin) && base62 (xgov) & hex (ethereum)
@@ -92,7 +79,21 @@ rkm.digest({
 });
 
 ```  
-    
+  
+  
+The function resolves to an output which is an encrypted questionnaire.
+The encrypted questionnaire does not store the answers inside (only questions, iteration numbers, and salt),
+and thus is a much safer way to store an recovery option at-rest. The hacker must provide the right decryption password,
+then, has to provide __all the answers correctly__; otherwise the recovery will output a gibberish 32-byte private key that
+resembles nothing like the original private key (not even partial resemblance which gives out information).
+  
+1) This is certainly better than 16~32 random recovery phrases
+that one has to write down which is vulnerable to location/physical attack)  
+  
+2) This is also superior to user-chosen seed words which is notoriously easier to brute-force.
+  
+  
+  
 #### LICENSE (Proprietary; For Audit-only Code Disclosure)
 © 2018 Potion, all rights reserved.  
 Unauthorized copying of this file, via any medium is strictly prohibited.  
