@@ -2,15 +2,17 @@
 
 [recoverkey.io](https://recoverkey.io "Potion: Recover Key")
   
-Personalized recovery scheme for private keys & un-resettable passwords with custom questionnaires  
+A recovery scheme for private keys & un-resettable passwords that contextualizable to a person
+(e.g. mapping to... private/security questions, biometric data, pictorial data, etc.)
   
-## Personalization Schematics
+  
+## Contextualization Schematics Diagram
   
 ![RKM Schematics](https://xgov.s3-accelerate.amazonaws.com/potion/rkm_scheme5.png "")
   
 ## Usage Documentation
   
-### Generating Strongly Encrypted Questionnaire
+### Generating a Strongly Encrypted Questionnaire (Safe-to-store)
 
 rkm.`digest`(  
 &nbsp; &nbsp; &nbsp; &nbsp; {  
@@ -84,8 +86,8 @@ rkm.digest({
 The function resolves to an output which is an encrypted questionnaire.
 The encrypted questionnaire does not store the answers inside (only questions, iteration numbers, and salt),
 and thus is a much safer way to store an recovery option at-rest. The hacker must provide the right decryption password,
-then, has to provide __all the answers correctly__; otherwise the recovery will output a gibberish 32-byte private key that
-resembles nothing like the original private key (not even partial resemblance which gives out information).
+then, has to provide __all the answers correctly simultaneously__; otherwise the recovery will output a gibberish 32-byte private key that
+resembles nothing like the original private key (not even a little partial resemblance which gives out information).
   
 1) This is certainly better than 16~32 random recovery phrases
 that one has to write down which is vulnerable to location/physical attack)  
