@@ -10,7 +10,7 @@ Personalized recovery scheme for private keys & un-resettable passwords with cus
   
 ## Usage Documentation
   
-### Generating Encrypted Questionnaire
+### Generating Strongly Encrypted Questionnaire
 
 rkm.`digest`(  
 &nbsp; &nbsp; &nbsp; &nbsp; {  
@@ -27,6 +27,16 @@ rkm.`digest`(
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *onprogress*:(func)  
 &nbsp; &nbsp; &nbsp; &nbsp; }  
 );
+
+The function resolves to an output which is an encrypted questionnaire.
+The encrypted questionnaire does not store the answers inside,
+and thus is a much safer way to store an recovery option at-rest.  
+  
+1) This is certainly better than 16~32 random recovery phrases
+that one has to write down which is vulnerable to location/physical attack)  
+  
+2) This is also superior to user-chosen seed words which is notoriously easier to brute-force.
+  
   
 ```javascript
 //
